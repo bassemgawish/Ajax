@@ -42,8 +42,8 @@
                         document.getElementById("msgsTable").innerHTML="<th>user name</th><th>message</th>";
                         var messagesObject = JSON.parse(responseTxt);
                         for(i=0; i<messagesObject.length; i++){
-                            var username = messagesObject[i].username;
-                            var message = messagesObject[i].message;
+                            var username = messagesObject[i].user;
+                            var message = messagesObject[i].msg;
                             var tr = document.createElement("tr");
                             var td1 = document.createElement("td");
                             var td2 = document.createElement("td");
@@ -63,7 +63,7 @@
                         document.getElementById("usersTable").innerHTML="<th>user name</th>";
                         var usersObject = JSON.parse(responseTxt);
                         for(i=0; i<usersObject.length; i++){
-                            var username = usersObject[i].username;
+                            var username = usersObject[i].user;
                             var tr = document.createElement("tr");
                             var td1 = document.createElement("td");
                             td1.innerHTML = username;
